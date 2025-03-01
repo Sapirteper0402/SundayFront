@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins:[react()],
   build: {
-    outDir: '../backend-SOL/public',
+    outDir: '../SundayBack/public',
     emptyOutDir: true
   }
 })
