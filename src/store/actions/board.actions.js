@@ -48,7 +48,7 @@ export async function loadBoards() {
     });
     const boards = await boardService.query();
 
-    console.log("Boards from DB:", boards);
+    // console.log("Boards from DB:", boards);
     store.dispatch({
       type: SET_BOARDS,
       boards
@@ -84,7 +84,7 @@ export async function getBoardById(boardId) {
 
 export async function updateBoardFromBoards(boards, boardIdToUpdate) {
   try {
-    console.log('boardIdToUpdate', boardIdToUpdate)
+    // console.log('boardIdToUpdate', boardIdToUpdate)
     let board = await boardService.getById(boardIdToUpdate._id);
     await boardService.save({...board, title: boardIdToUpdate.title});
     store.dispatch({
@@ -171,7 +171,7 @@ export async function RemoveTask(boardId, groupId, taskId, activity = {}) {
 }
 
 export async function SaveGroup(boardId, index, group, activity = {}) {
-  console.log('SaveGroup' , group)
+  // console.log('SaveGroup' , group)
   let board = await boardService.getById(boardId);
   board = await boardService.saveGroup(board, index, group, activity);
   // updateBoard(board);
@@ -186,7 +186,7 @@ export async function RemoveGroup(boardId, groupId, activity = {}) {
 }
 
 export async function SaveStatusPicker(boardId, statusPicker) {
-  console.log('statusPicker' , statusPicker)
+  // console.log('statusPicker' , statusPicker)
   let board = await boardService.getById(boardId);
   board = await boardService.saveStatusPicker(board, statusPicker);
   // updateBoard(board);
@@ -211,8 +211,8 @@ export function onRemoveBoardOptimistic(boardId) {
       console.log("Server Reported - Deleted Successfully");
     })
     .catch((err) => {
-      showErrorMsg("Cannot remove car");
-      console.log("Cannot load cars", err);
+      showErrorMsg("Cannot remove Board");
+      console.log("Cannot load Board", err);
       store.dispatch({
         type: UNDO_REMOVE_BOARD,
       });
@@ -277,7 +277,7 @@ export function getEmptyBoard() {
       },
       {
         _id: "u103",
-        fullname: "Oren Melamed",
+        fullname: "Adi Marom",
         imgUrl: "",
       },
     ],

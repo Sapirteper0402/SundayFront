@@ -200,7 +200,7 @@ export function getEmptyBoard() {
       },
       {
         _id: "u103",
-        fullname: "Oren Melamed",
+        fullname: "Adi Marom",
         imgUrl: "",
       },
     ],
@@ -252,7 +252,7 @@ function _createBoards() {
         },
         {
           _id: "u103",
-          fullname: "Oren Melamed",
+          fullname: "Adi Marom",
           imgUrl: "",
         },
       ],
@@ -454,7 +454,7 @@ function _createBoards() {
         },
         {
           _id: "u103",
-          fullname: "Oren Melamed",
+          fullname: "Adi Marom",
           imgUrl: "",
         },
       ],
@@ -541,7 +541,7 @@ function _createBoards() {
         },
         {
           _id: "u103",
-          fullname: "Oren Melamed",
+          fullname: "Adi Marom",
           imgUrl: "",
         },
       ],

@@ -22,7 +22,7 @@ export function BoardDetails(isLoading, currBoardTitle) {
   const currBoard = useSelector((storeState) => storeState.boardModule.currBoard);
   const [update,setUpdate] = useState(false)
   const params = useParams()
-  
+
   useEffect(() => {
     if(params.id){
       getBoardById(params.id)
@@ -43,7 +43,6 @@ export function BoardDetails(isLoading, currBoardTitle) {
 
   async function onSaveGroup(index, group,activity = {}) {
     try {
-      console.log('boardDetails ',group)
       const boardToSave = await SaveGroup(currBoard._id, index, group, activity);
       // await updateBoardOptimistic(boardToSave)
       await updateBoard(boardToSave)

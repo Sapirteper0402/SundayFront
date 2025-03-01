@@ -118,7 +118,7 @@ function bringColorArray() {
 function getRandomColor() {
     const rgbColors = bringColor();
     const randomIndex = Math.floor(Math.random() * rgbColors.length); 
-    console.log('color', rgbColors[randomIndex]);
+    // console.log('color', rgbColors[randomIndex]);
     return rgbColors[randomIndex]; 
 }
 
